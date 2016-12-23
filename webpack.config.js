@@ -1,8 +1,9 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     devtool: 'source-map',
-    entry: "./src/app.js",
+    entry: "./src/index.js",
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'bundle.js',
@@ -17,10 +18,9 @@ module.exports = {
                 include: path.join(__dirname, 'src'),
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './'
     }
-    // output: {
-    //     path: path.join(__dirname, 'build'),
-    //     filename: 'bundle.js',
-    //     publicPath: '/static/'
-    // },
 };
