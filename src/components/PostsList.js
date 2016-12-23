@@ -25,7 +25,7 @@ export class PostsList extends React.Component {
     render() {
         return (
             <div className="post-list">
-                <h1>This is one cool app! {this.props.test}</h1>
+                <h1>Posts</h1>
                 <PostsForm savePost={this.props.savePost}/>
                 <Foo/>
                 {this.renderPosts()}
