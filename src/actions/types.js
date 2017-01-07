@@ -1,5 +1,6 @@
 export const SAVE_POST = 'SAVE_POST';
 export const LOAD_POSTS = 'LOAD_POSTS';
+export const LOAD_POST_BY_ID = 'LOAD_POST_BY_ID';
 
 export const CHANGE_AUTH = 'change_auth';
 export const AUTH_USER = 'auth_user';

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { authenticate } from '../actions/auth';
 import { Link } from 'react-router';
 
-class Header extends Component {
+class Sidebar extends Component {
     static propTypes = {
 
     };
@@ -27,8 +27,11 @@ class Header extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-light">
-                <ul className="nav navbar-nav">
+            <div className="sidebar">
+                <figure className="profile">
+                    <a href="/"><img src="/images/profile_100.jpg" className="img-circle thick-black-border" alt="Aydar Khannanov"/></a>
+                </figure>
+                <ul className="list-unstyled">
                     <li className="nav-item">
                         <Link to="/">Home</Link>
                     </li>
@@ -37,11 +40,11 @@ class Header extends Component {
                     </li>
                     {this.renderLinks()}
                 </ul>
-            </nav>
+            </div>
         );
     }
 }
 
 export default connect(state => {
     return { authenticated: state.auth.authenticated }
-}, { authenticate })(Header);
+}, { authenticate })(Sidebar);

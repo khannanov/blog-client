@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import PostDetails from '../../src/components/PostDetails';
+import PostDetails from '../../src/components/posts/PostDetails';
 
 describe('<PostDetails/>', () => {
     const props = {

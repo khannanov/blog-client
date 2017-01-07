@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow, mount, render } from 'enzyme';
-import PostsForm from '../../src/components/PostsForm';
+import PostsForm from '../../src/components/posts/PostsForm';
 
 describe('PostsForm', () => {
     let component;

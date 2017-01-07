@@ -10,36 +10,46 @@
     "dev": "webpack-dev-server --hot --inline --config ./webpack.dev.config.js",
     "start": "node ./src/app.js",
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
-    "test": "mocha --require './test/setup.js' -R spec './test/**/*.spec.js' --compilers js:babel-core/register --watch"
+    "test": "mocha --require './test/setup.js' -R spec './test/**/*.spec.js' --compilers js:babel-core/register --watch",
+    "test-jest": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.14.0",
+    "babel-jest": "^18.0.0",
     "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
-    "chai": "^3.5.0",
+    "css-loader": "^0.26.1",
     "enzyme": "^2.4.1",
-    "expect": "^1.20.2",
-    "jsdom": "^9.5.0",
-    "mocha": "^3.0.2",
+    "enzyme-to-json": "^1.4.5",
+    "jest": "^18.1.0",
     "react-addons-test-utils": "^15.3.2",
-    "sinon": "^1.17.6",
+    "react-test-renderer": "^15.4.1",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "express": "^4.14.0",
     "react": "^15.3.2",
+    "react-addons-create-fragment": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.3.2",
+    "react-paginate": "^4.1.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "redux": "^3.6.0",
     "redux-form": "^6.1.1",
-    "redux-thunk": "^2.1.0",
-    "express": "^4.14.0"
+    "redux-thunk": "^2.1.0"
+  },
+  "jest": {
+    "testPathDirs": [
+      "__tests__"
+    ]
   }
 }

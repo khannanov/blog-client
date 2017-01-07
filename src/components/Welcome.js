@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default () => <div>Welcome to our slice of paradise</div>;
+export default () => <div><h2>Memories.Experience.Sandbox.</h2></div>;

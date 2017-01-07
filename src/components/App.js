@@ -1,36 +1,29 @@
 import React, {Component, PropTypes} from 'react';
-import { connect } from 'react-redux';
-import { savePost, loadPosts } from '../actions/posts';
-import PostsList from './PostsList';
-import Header from './Header';
+import Sidebar from './Sidebar';
+import Welcome from './Welcome';
 
 export class App extends Component {
     constructor(props) {
         super(props)
     }
 
-    componentDidMount() {
-        this.props.loadPosts();
-    }
-
-    static propTypes = {
-        savePost: PropTypes.func,
-        loadPosts: PropTypes.func
-    };
-
     render() {
-        const { posts, savePost } = this.props;
-
         return (
-            <div>
-                <Header/>
-                {this.props.children}
-                <PostsList posts={posts} savePost={savePost}/>
+            <div className="container pull-left">
+                <div className="row">
+                    <div className="col-md-4">
+                        <Sidebar/>
+                    </div>
+                    <div className="col-md-8">
+                        <Welcome/>
+                        <div className="page">
+                            {this.props.children}
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
 }
 
-export default connect(state => {
-    return { posts: state.posts }
-}, { savePost, loadPosts })(App);
+export default App;

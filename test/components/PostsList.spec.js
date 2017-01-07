@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
-import { PostsList } from '../../src/components/PostsList';
+import { PostsList } from '../../src/components/posts/PostsList';
 
 describe('PostsList', () => {
     let component;

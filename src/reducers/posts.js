@@ -1,14 +1,21 @@
-import { SAVE_POST, LOAD_POSTS } from '../actions/types';
+import { SAVE_POST, LOAD_POSTS, LOAD_POST_BY_ID } from '../actions/types';
 
-export default function (posts = [], action) {
+const initialState = {
+    posts: [],
+    total: 0,
+    loading: false
+};
+
+export default function (state = initialState, action) {
     const { type, payload } = action;
     switch(type) {
         case SAVE_POST:
-            return [ ...posts, payload ];
+            return { ...state, ...payload };
         case LOAD_POSTS:
-            return payload; //todo mutability check!
-
+            return { ...state, ...payload };
+        case LOAD_POST_BY_ID:
+            return { ...state, posts: [{ ...payload }] };
     }
 
-    return posts;
+    return state;
 }

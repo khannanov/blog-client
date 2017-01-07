@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMessage } from '../actions/auth';
+import { Link } from 'react-router';
 
 class Resources extends Component {
     componentWillMount() {
@@ -12,9 +13,7 @@ class Resources extends Component {
             <div>
                 {this.props.message}
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                    <li><Link to="/resources/post/add">Add post</Link></li>
                 </ul>
             </div>
         );
